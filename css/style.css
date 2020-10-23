@@ -11,6 +11,7 @@
 .title {
   font-size: 2.8rem;
   font-weight: 700;
+  line-height: 1.2em;
 }
 .btn {
   border-radius: 7px;
@@ -27,8 +28,8 @@
 }
 .btn:hover {
   transition: 1s;
-  background-color: beige;
-  color: rgba(0, 0, 0, 1);
+  background-color: #7a0bbf;
+  /* color: rgba(0, 0, 0, 1); */
 }
 .text-underline {
   position: relative;
@@ -60,8 +61,9 @@
   color: black;
   transition: 0.8s;
 }
-.btn--blue:hover {
-  box-shadow: 0 3px 0 #000;
+.btn--blue:hover,
+.reviews__btn:hover {
+  box-shadow: 0 3px 0 rgba(152, 152, 152, 0.5);
 }
 .screen-wrap {
   max-width: 100%;
@@ -393,6 +395,11 @@
   background-color: #9069ae;
   box-shadow: 0 3px 0 rgba(144, 105, 174, 0.8);
 }
+.btn--look-viber:hover,
+.btn--look-telegram:hover {
+  background-color: #eeeeee;
+  color: #444;
+}
 .btn--look-telegram:before {
   content: url("../img/telegram-small.png");
 }
@@ -690,7 +697,7 @@
   background-color: #fff;
   border: 2px solid #002058;
   padding: 0 30px;
-  color: #000 !important;
+  color: #000;
   margin-top: 65px;
 }
 .reviews__slider-wrap {
@@ -755,9 +762,7 @@
   max-width: 320px;
 }
 .reviews__btn:hover {
-  border-color: azure;
-  box-shadow: 0 3px 0 #000;
-  background-color: azure;
+  border-color: #7a0bbf;
   color: #fff;
 }
 /*===   /REVIEWS   ===*/
@@ -779,10 +784,6 @@
   margin: 85px 0;
   max-width: 628px;
 }
-
-
-
-
 
 .slider--dev {
   width: 100%;
@@ -820,7 +821,7 @@
   max-width: 1200px;
   overflow: hidden;
 }
-.slider--dev .slick-arrow{
+.slider--dev .slick-arrow {
   bottom: -120px;
   z-index: 10;
 }
@@ -1228,6 +1229,14 @@
     margin-bottom: 60px;
     max-width: 1200px;
   }
+  .slider--dev:before,
+  .slider--dev:after {
+    display: none;
+  }
+  .reviews__slider-wrap:before,
+  .reviews__slider-wrap:after {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   .btn--personal-area {
@@ -1287,4 +1296,16 @@
   .logo-incity-icon {
     width: 80px;
   }
+}
+.btn:active {
+  background-color: #7a0bbf;
+  box-shadow: none;
+  transition: 0.3s;
+}
+.btn--look-viber:active,
+.btn--look-telegram:active {
+  background-color: rgb(235, 227, 227);
+  color: #444;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
 }
