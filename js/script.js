@@ -41,7 +41,7 @@ $(document).ready(function(){
     });
     $('.slider--dev').slick({
         slidesToShow: 1,
-        infinite: false,
+        infinite: true,
         variableWidth: true,
         centerMode: true,
         responsive: [
